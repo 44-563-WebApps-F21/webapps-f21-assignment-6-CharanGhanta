@@ -61,15 +61,23 @@
                 tagged.innerHTML = "Guess Correct count = " + correct;
             }
             else {
-                wrong = wrong + 1;
-                alert("Access Denied");
-                tagged.innerHTML = "Guess Wrong count = " + wrong;
+                if (wrong > 2) {
+                    alert("Account Locked! Please try again")
+                    tagged.innerHTML = "account locked";
+                }
+                else {
+                    wrong = wrong + 1;
+                    alert("Access Denied");
+                    tagged.innerHTML = "Guess Wrong count = " + wrong;
+                }
+
             }
         }
     </script>
 
     <div class="container">
-        <img src="AfricanPengiun.jpg" alt="AfricanPenguin" id="imgClickAndChange" height="200" width="200"  onclick="newImage()">
+        <img src="AfricanPengiun.jpg" alt="AfricanPenguin" id="imgClickAndChange" height="200" width="200"
+            onclick="newImage()">
         <p id="changetheValue">Image values are displayed when clicked on image.</p>
     </div>
 
