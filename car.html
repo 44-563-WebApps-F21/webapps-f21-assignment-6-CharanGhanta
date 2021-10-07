@@ -36,13 +36,14 @@
 
             if (confirmed) {
                 my_car = { electric, ac, gps }
+                my_car = JSON.stringify(my_car)
+                taggd.innerHTML = my_car
+                my_car = JSON.parse(my_car)
             }
             else {
                 my_car = { electric, ac, gps }
+                taggd.innerHTML = "Values were not confirmed, so it returns an empty string."
             }
-            my_car = JSON.stringify(my_car)
-            taggd.innerHTML = my_car
-            my_car = JSON.parse(my_car)
         }
     </script>
 
